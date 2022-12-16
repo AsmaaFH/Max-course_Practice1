@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Wrapper from '../Helpers/Wrapper';
 import Button from '../UI/Button';
 import Card from '../UI/Card';
 import ErrorModal from '../UI/ErrorModal';
@@ -40,7 +39,7 @@ const AddUser = (props) => {
     setError(null);
   };
   return (
-    <Wrapper>
+    <>
       {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler} />}
       <Card className={styles.input}>
         <form onSubmit={addUserHandler}>
@@ -60,7 +59,7 @@ const AddUser = (props) => {
           </Button>
         </form>
       </Card>
-    </Wrapper>
+    </>
   );
 };
 
